@@ -13,26 +13,36 @@ class Message {
     public function setImageThumbnail($url)
     {
         $this->message['imageThumbnail'] = $url;
+
+        return $this;
     }
 
     public function setImageFullsize($url)
     {
         $this->message['imageFullsize'] = $url;
+
+        return $this;
     }
 
     public function setStickerPackageId($packageId)
     {
         $this->message['stickerPackageId'] = $packageId;
+
+        return $this;
     }
 
     public function setStickerId($stickerId)
     {
         $this->message['stickerId'] = $stickerId;
+
+        return $this;
     }
 
-    public function serNotificationDisabled($boolean = false)
+    public function setNotificationDisabled($boolean = false)
     {
         $this->message['notificationDisabled'] = $boolean;
+
+        return $this;
     }
 
     public function build()
